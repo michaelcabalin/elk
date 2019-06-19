@@ -31,7 +31,7 @@ sed -re 's/localhost:9200/cms01.fj04.swiftserve.com:9200/' -i /etc/metricbeat/me
 sleep 5s
 mv /etc/heartbeat/heartbeat.yml /etc/heartbeat/heartbeat.yml_old
 sleep 2s
-cp elk/da-heartbeat.yml /etc/heartbeat/
+cp da-heartbeat.yml /etc/heartbeat/
 mv /etc/heartbeat/da-heartbeat.yml /etc/heartbeat/heartbeat.yml
 sleep 2s
 sed -i -e "s/da01.fj02.swiftserve.com/$(hostname)/g" /etc/heartbeat/heartbeat.yml
